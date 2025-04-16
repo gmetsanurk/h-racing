@@ -8,11 +8,8 @@ protocol RaceViewProtocol: AnyObject {
     
 }
 
-import UIKit
-
 class RacePresenter {
     weak var view: RaceViewProtocol?
-    var horseViews: [UIView] = []
     let horseCount = 5
     var raceFinishedCount = 0
     var finishOrder: [Int] = []

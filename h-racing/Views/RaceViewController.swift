@@ -65,4 +65,17 @@ extension RaceViewController {
                        alpha: 1.0)
     }
     
+    func animateHorse(at index: Int, duration: TimeInterval, finishLineX: CGFloat, completion: @escaping () -> Void) {
+        guard index < horseViews.count else { return }
+        let horseView = horseViews[index]
+        horseView.frame.origin.x = 20
+        UIView.animate(withDuration: duration, delay: 0, options: .curveLinear, animations: {
+            horseView.frame.origin.x = finishLineX
+        }, completion: { finished in
+            if finished {
+                completion()
+            }
+        })
+    }
+    
 }
