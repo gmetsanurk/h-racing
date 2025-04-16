@@ -8,6 +8,9 @@
 import UIKit
 
 class RaceViewController: UIViewController {
+    
+    let presenter = RacePresenter()
+    
     let startButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Start", for: .normal)
