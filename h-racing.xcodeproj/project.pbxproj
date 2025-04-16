@@ -10,6 +10,9 @@
 		66EA93132DAFC08B00E19920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA930E2DAFC08B00E19920 /* AppDelegate.swift */; };
 		66EA93142DAFC08B00E19920 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA93112DAFC08B00E19920 /* ViewController.swift */; };
 		66EA93152DAFC08B00E19920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66EA930F2DAFC08B00E19920 /* Assets.xcassets */; };
+		66EA931A2DAFC29B00E19920 /* RaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA93192DAFC29A00E19920 /* RaceModel.swift */; };
+		66EA931C2DAFC2E000E19920 /* RaceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA931B2DAFC2DA00E19920 /* RaceManager.swift */; };
+		66EA931E2DAFC31000E19920 /* RaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA931D2DAFC30900E19920 /* RaceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +21,9 @@
 		66EA930F2DAFC08B00E19920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66EA93102DAFC08B00E19920 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66EA93112DAFC08B00E19920 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		66EA93192DAFC29A00E19920 /* RaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceModel.swift; sourceTree = "<group>"; };
+		66EA931B2DAFC2DA00E19920 /* RaceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceManager.swift; sourceTree = "<group>"; };
+		66EA931D2DAFC30900E19920 /* RaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,10 +58,29 @@
 			children = (
 				66EA930E2DAFC08B00E19920 /* AppDelegate.swift */,
 				66EA93112DAFC08B00E19920 /* ViewController.swift */,
+				66EA931B2DAFC2DA00E19920 /* RaceManager.swift */,
+				66EA93172DAFC27D00E19920 /* Views */,
+				66EA93182DAFC28C00E19920 /* Models */,
 				66EA930F2DAFC08B00E19920 /* Assets.xcassets */,
 				66EA93102DAFC08B00E19920 /* Info.plist */,
 			);
 			path = "h-racing";
+			sourceTree = "<group>";
+		};
+		66EA93172DAFC27D00E19920 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				66EA931D2DAFC30900E19920 /* RaceViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		66EA93182DAFC28C00E19920 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				66EA93192DAFC29A00E19920 /* RaceModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +155,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66EA931A2DAFC29B00E19920 /* RaceModel.swift in Sources */,
 				66EA93132DAFC08B00E19920 /* AppDelegate.swift in Sources */,
+				66EA931E2DAFC31000E19920 /* RaceViewController.swift in Sources */,
+				66EA931C2DAFC2E000E19920 /* RaceManager.swift in Sources */,
 				66EA93142DAFC08B00E19920 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
