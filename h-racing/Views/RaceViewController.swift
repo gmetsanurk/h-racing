@@ -40,23 +40,29 @@ class RaceViewController: UIViewController {
 extension RaceViewController {
     
     func setupHorses() {
-
-            for horse in horseViews {
-                horse.removeFromSuperview()
-            }
-            horseViews.removeAll()
-            
-            let horseWidth: CGFloat = 50
-            let horseHeight: CGFloat = 30
-            let spacing: CGFloat = 20
-            
-            for i in 0..<horseCount {
-                let horseView = UIView()
-                horseView.backgroundColor = .yellow
-                horseView.frame = CGRect(x: 20, y: 150 + CGFloat(i) * (horseHeight + spacing), width: horseWidth, height: horseHeight)
-                view.addSubview(horseView)
-                horseViews.append(horseView)
-            }
+        for horse in horseViews {
+            horse.removeFromSuperview()
         }
+        horseViews.removeAll()
+        
+        let horseWidth: CGFloat = 50
+        let horseHeight: CGFloat = 30
+        let spacing: CGFloat = 20
+        
+        for i in 0..<horseCount {
+            let horseView = UIView()
+            horseView.backgroundColor = randomColor()
+            horseView.frame = CGRect(x: 20, y: 150 + CGFloat(i) * (horseHeight + spacing), width: horseWidth, height: horseHeight)
+            view.addSubview(horseView)
+            horseViews.append(horseView)
+        }
+    }
+    
+    func randomColor() -> UIColor {
+        return UIColor(red: CGFloat.random(in: 0.3...1.0),
+                       green: CGFloat.random(in: 0.3...1.0),
+                       blue: CGFloat.random(in: 0.3...1.0),
+                       alpha: 1.0)
+    }
     
 }
