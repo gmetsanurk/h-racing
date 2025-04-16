@@ -21,7 +21,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setupWindow() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let homeVC = HomeViewController()
+        let homeVC = HomeTabBarController()
         window?.rootViewController = homeVC
         window?.makeKeyAndVisible()
     }
