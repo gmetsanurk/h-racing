@@ -15,7 +15,7 @@
 		66EA931E2DAFC31000E19920 /* RaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA931D2DAFC30900E19920 /* RaceViewController.swift */; };
 		66EA93202DAFC3CC00E19920 /* RacePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA931F2DAFC3C800E19920 /* RacePresenter.swift */; };
 		66EA93232DAFCB1A00E19920 /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA93222DAFCB1300E19920 /* HistoryPresenter.swift */; };
-		66EA93252DAFCB4700E19920 /* HisoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA93242DAFCB3C00E19920 /* HisoryViewController.swift */; };
+		66EA93252DAFCB4700E19920 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA93242DAFCB3C00E19920 /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		66EA931D2DAFC30900E19920 /* RaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewController.swift; sourceTree = "<group>"; };
 		66EA931F2DAFC3C800E19920 /* RacePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacePresenter.swift; sourceTree = "<group>"; };
 		66EA93222DAFCB1300E19920 /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
-		66EA93242DAFCB3C00E19920 /* HisoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HisoryViewController.swift; sourceTree = "<group>"; };
+		66EA93242DAFCB3C00E19920 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				66EA931D2DAFC30900E19920 /* RaceViewController.swift */,
-				66EA93242DAFCB3C00E19920 /* HisoryViewController.swift */,
+				66EA93242DAFCB3C00E19920 /* HistoryViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,7 +174,7 @@
 			files = (
 				66EA93202DAFC3CC00E19920 /* RacePresenter.swift in Sources */,
 				66EA931A2DAFC29B00E19920 /* RaceModel.swift in Sources */,
-				66EA93252DAFCB4700E19920 /* HisoryViewController.swift in Sources */,
+				66EA93252DAFCB4700E19920 /* HistoryViewController.swift in Sources */,
 				66EA93132DAFC08B00E19920 /* AppDelegate.swift in Sources */,
 				66EA931E2DAFC31000E19920 /* RaceViewController.swift in Sources */,
 				66EA931C2DAFC2E000E19920 /* RaceManager.swift in Sources */,

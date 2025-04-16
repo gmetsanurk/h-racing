@@ -9,7 +9,10 @@ import UIKit
 
 class RaceViewController: UIViewController {
     
-    let presenter = RacePresenter()
+    var horseViews: [UIView] = []
+    let horseCount = 5
+    
+    var presenter: RacePresenter!
     
     let startButton: UIButton = {
         let button = UIButton(type: .system)
