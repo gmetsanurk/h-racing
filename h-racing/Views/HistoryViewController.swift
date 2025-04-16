@@ -15,7 +15,7 @@ class HistoryViewController: UIViewController, HistoryViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        title = "История скачек"
+        title = "Race history"
         presenter = HistoryPresenter(view: self)
         setupTableView()
     }

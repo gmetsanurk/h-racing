@@ -33,7 +33,9 @@ class RaceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        presenter = RacePresenter(view: self)
         setupUI()
+        setupHorses()
     }
 }
 
@@ -82,25 +84,25 @@ extension RaceViewController: RaceViewProtocol {
     }
     
     @objc func startButtonTapped() {
-            presenter.startRace()
-        }
-        
-        @objc func resetButtonTapped() {
-            presenter.resetRace()
-        }
-        
-        
-        func setStartButtonEnabled(_ enabled: Bool) {
-            startButton.isEnabled = enabled
-        }
-        
-        func setResetButtonHidden(_ hidden: Bool) {
-            resetButton.isHidden = hidden
-        }
-        
-        func resetHorses() {
-            setupHorses()
-        }
+        presenter.startRace()
+    }
+    
+    @objc func resetButtonTapped() {
+        presenter.resetRace()
+    }
+    
+    
+    func setStartButtonEnabled(_ enabled: Bool) {
+        startButton.isEnabled = enabled
+    }
+    
+    func setResetButtonHidden(_ hidden: Bool) {
+        resetButton.isHidden = hidden
+    }
+    
+    func resetHorses() {
+        setupHorses()
+    }
         
     
     func animateHorse(at index: Int, duration: TimeInterval, finishLineX: CGFloat, completion: @escaping () -> Void) {
