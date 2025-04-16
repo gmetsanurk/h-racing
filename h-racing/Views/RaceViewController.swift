@@ -78,4 +78,11 @@ extension RaceViewController {
         })
     }
     
+    func showFinishAlert(with finishOrder: [Int]) {
+        let orderString = finishOrder.map { "Horse \($0)" }.joined(separator: ", ")
+        let alert = UIAlertController(title: "Finish!", message: "Finish order: \(orderString)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
 }
