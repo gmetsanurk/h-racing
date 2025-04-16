@@ -53,11 +53,16 @@ extension RacePresenter {
         }
     }
     
-    func raceCompleted() {
-        
+    private func raceCompleted() {
+        let result = RaceResult(date: Date(), finishOrder: finishOrder)
+        RaceHistoryManager.shared.addResult(result)
+        view?.setResetButtonHidden(false)
+        view?.showFinishAlert(with: finishOrder)
     }
     
     func resetRace() {
-        
+        view?.setStartButtonEnabled(true)
+        view?.setResetButtonHidden(true)
+        view?.resetHorses()
     }
 }
