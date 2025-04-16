@@ -37,7 +37,7 @@ class RaceViewController: UIViewController {
     }
 }
 
-extension RaceViewController {
+extension RaceViewController: RaceViewProtocol {
     
     func setupHorses() {
         for horse in horseViews {
@@ -64,6 +64,28 @@ extension RaceViewController {
                        blue: CGFloat.random(in: 0.3...1.0),
                        alpha: 1.0)
     }
+    
+    @objc func startButtonTapped() {
+            presenter.startRace()
+        }
+        
+        @objc func resetButtonTapped() {
+            presenter.resetRace()
+        }
+        
+        
+        func setStartButtonEnabled(_ enabled: Bool) {
+            startButton.isEnabled = enabled
+        }
+        
+        func setResetButtonHidden(_ hidden: Bool) {
+            resetButton.isHidden = hidden
+        }
+        
+        func resetHorses() {
+            setupHorses()
+        }
+        
     
     func animateHorse(at index: Int, duration: TimeInterval, finishLineX: CGFloat, completion: @escaping () -> Void) {
         guard index < horseViews.count else { return }
