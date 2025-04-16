@@ -18,3 +18,7 @@ class HistoryViewController: UIViewController {
 
     }
 }
+
+extension HistoryViewController {
+    
+}

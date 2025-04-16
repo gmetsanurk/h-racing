@@ -36,3 +36,27 @@ class RaceViewController: UIViewController {
         //setupUI()
     }
 }
+
+extension RaceViewController {
+    
+    func setupHorses() {
+
+            for horse in horseViews {
+                horse.removeFromSuperview()
+            }
+            horseViews.removeAll()
+            
+            let horseWidth: CGFloat = 50
+            let horseHeight: CGFloat = 30
+            let spacing: CGFloat = 20
+            
+            for i in 0..<horseCount {
+                let horseView = UIView()
+                horseView.backgroundColor = .yellow
+                horseView.frame = CGRect(x: 20, y: 150 + CGFloat(i) * (horseHeight + spacing), width: horseWidth, height: horseHeight)
+                view.addSubview(horseView)
+                horseViews.append(horseView)
+            }
+        }
+    
+}
