@@ -23,4 +23,10 @@ class RaceViewController: UIViewController {
         button.isHidden = true
         return button
     }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+        //setupUI()
+    }
 }
