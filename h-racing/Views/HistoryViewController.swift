@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HistoryViewController: UIViewController {
+class HistoryViewController: UIViewController, HistoryViewProtocol {
     
     let tableView = UITableView()
     var presenter: HistoryPresenter!
@@ -15,8 +15,11 @@ class HistoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
+        title = "История скачек"
+        presenter = HistoryPresenter(view: self)
+        setupTableView()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.viewWillAppear()
