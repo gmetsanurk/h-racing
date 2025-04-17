@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		66EA93132DAFC08B00E19920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA930E2DAFC08B00E19920 /* AppDelegate.swift */; };
 		66EA93152DAFC08B00E19920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66EA930F2DAFC08B00E19920 /* Assets.xcassets */; };
-		66EA931A2DAFC29B00E19920 /* RaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA93192DAFC29A00E19920 /* RaceModel.swift */; };
-		66EA931C2DAFC2E000E19920 /* RaceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA931B2DAFC2DA00E19920 /* RaceManager.swift */; };
+		66EA931A2DAFC29B00E19920 /* RaceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA93192DAFC29A00E19920 /* RaceResult.swift */; };
+		66EA931C2DAFC2E000E19920 /* RaceHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA931B2DAFC2DA00E19920 /* RaceHistoryManager.swift */; };
 		66EA931E2DAFC31000E19920 /* RaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA931D2DAFC30900E19920 /* RaceViewController.swift */; };
 		66EA93202DAFC3CC00E19920 /* RacePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA931F2DAFC3C800E19920 /* RacePresenter.swift */; };
 		66EA93232DAFCB1A00E19920 /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA93222DAFCB1300E19920 /* HistoryPresenter.swift */; };
 		66EA93252DAFCB4700E19920 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA93242DAFCB3C00E19920 /* HistoryViewController.swift */; };
 		66EA93272DAFD15C00E19920 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA93262DAFD15600E19920 /* HomeTabBarController.swift */; };
+		66EA932C2DB111BC00E19920 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 66EA932B2DB111BC00E19920 /* RealmSwift */; };
+		66EA93312DB11C9700E19920 /* RealmCollection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA93302DB11C8700E19920 /* RealmCollection+Extension.swift */; };
+		66EA93332DB1202D00E19920 /* List+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA93322DB1202700E19920 /* List+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,13 +26,15 @@
 		66EA930E2DAFC08B00E19920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66EA930F2DAFC08B00E19920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66EA93102DAFC08B00E19920 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66EA93192DAFC29A00E19920 /* RaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceModel.swift; sourceTree = "<group>"; };
-		66EA931B2DAFC2DA00E19920 /* RaceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceManager.swift; sourceTree = "<group>"; };
+		66EA93192DAFC29A00E19920 /* RaceResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceResult.swift; sourceTree = "<group>"; };
+		66EA931B2DAFC2DA00E19920 /* RaceHistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceHistoryManager.swift; sourceTree = "<group>"; };
 		66EA931D2DAFC30900E19920 /* RaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewController.swift; sourceTree = "<group>"; };
 		66EA931F2DAFC3C800E19920 /* RacePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacePresenter.swift; sourceTree = "<group>"; };
 		66EA93222DAFCB1300E19920 /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
 		66EA93242DAFCB3C00E19920 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		66EA93262DAFD15600E19920 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		66EA93302DB11C8700E19920 /* RealmCollection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealmCollection+Extension.swift"; sourceTree = "<group>"; };
+		66EA93322DB1202700E19920 /* List+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66EA932C2DB111BC00E19920 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,12 +69,13 @@
 			isa = PBXGroup;
 			children = (
 				66EA930E2DAFC08B00E19920 /* AppDelegate.swift */,
-				66EA931B2DAFC2DA00E19920 /* RaceManager.swift */,
+				66EA931B2DAFC2DA00E19920 /* RaceHistoryManager.swift */,
 				66EA93172DAFC27D00E19920 /* Views */,
 				66EA93182DAFC28C00E19920 /* Models */,
 				66EA93212DAFC3E500E19920 /* Presenters */,
 				66EA930F2DAFC08B00E19920 /* Assets.xcassets */,
 				66EA93102DAFC08B00E19920 /* Info.plist */,
+				66EA932F2DB11C7B00E19920 /* Extension */,
 			);
 			path = "h-racing";
 			sourceTree = "<group>";
@@ -86,7 +93,7 @@
 		66EA93182DAFC28C00E19920 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				66EA93192DAFC29A00E19920 /* RaceModel.swift */,
+				66EA93192DAFC29A00E19920 /* RaceResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -98,6 +105,15 @@
 				66EA93222DAFCB1300E19920 /* HistoryPresenter.swift */,
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		66EA932F2DB11C7B00E19920 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				66EA93322DB1202700E19920 /* List+Extension.swift */,
+				66EA93302DB11C8700E19920 /* RealmCollection+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,6 +133,7 @@
 			);
 			name = "h-racing";
 			packageProductDependencies = (
+				66EA932B2DB111BC00E19920 /* RealmSwift */,
 			);
 			productName = "h-racing";
 			productReference = 66EA92D62DAFBE0A00E19920 /* h-racing.app */;
@@ -146,6 +163,9 @@
 			);
 			mainGroup = 66EA92CD2DAFBE0A00E19920;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				66EA93282DB111BC00E19920 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 66EA92D72DAFBE0A00E19920 /* Products */;
 			projectDirPath = "";
@@ -173,12 +193,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				66EA93202DAFC3CC00E19920 /* RacePresenter.swift in Sources */,
-				66EA931A2DAFC29B00E19920 /* RaceModel.swift in Sources */,
+				66EA931A2DAFC29B00E19920 /* RaceResult.swift in Sources */,
 				66EA93252DAFCB4700E19920 /* HistoryViewController.swift in Sources */,
 				66EA93272DAFD15C00E19920 /* HomeTabBarController.swift in Sources */,
 				66EA93132DAFC08B00E19920 /* AppDelegate.swift in Sources */,
 				66EA931E2DAFC31000E19920 /* RaceViewController.swift in Sources */,
-				66EA931C2DAFC2E000E19920 /* RaceManager.swift in Sources */,
+				66EA93312DB11C9700E19920 /* RealmCollection+Extension.swift in Sources */,
+				66EA93332DB1202D00E19920 /* List+Extension.swift in Sources */,
+				66EA931C2DAFC2E000E19920 /* RaceHistoryManager.swift in Sources */,
 				66EA93232DAFCB1A00E19920 /* HistoryPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +405,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		66EA93282DB111BC00E19920 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				kind = exactVersion;
+				version = 10.54.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		66EA932B2DB111BC00E19920 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EA93282DB111BC00E19920 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 66EA92CE2DAFBE0A00E19920 /* Project object */;
 }

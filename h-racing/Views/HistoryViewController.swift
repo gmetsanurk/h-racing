@@ -16,7 +16,7 @@ class HistoryViewController: UIViewController, HistoryViewProtocol {
         super.viewDidLoad()
         view.backgroundColor = .white
         title = "Race history"
-        presenter = HistoryPresenter(view: self)
+        presenter = HistoryPresenter()
         setupTableView()
     }
     
@@ -47,12 +47,14 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let result = presenter.result(at: indexPath.row)
+        let (date, order) = presenter.result(at: indexPath.row)
+        
         let formatter = DateFormatter()
         formatter.dateStyle = .short
         formatter.timeStyle = .short
-        let dateStr = formatter.string(from: result.date)
-        let orderString = result.finishOrder.map { "Лошадь \($0)" }.joined(separator: ", ")
+        let dateStr = formatter.string(from: date)
+        
+        let orderString = order.map { "Horse \($0)" }.joined(separator: ", ")
         cell.textLabel?.text = "\(dateStr): \(orderString)"
         cell.textLabel?.numberOfLines = 0
         return cell

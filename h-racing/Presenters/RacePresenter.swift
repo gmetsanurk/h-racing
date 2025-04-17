@@ -55,7 +55,7 @@ extension RacePresenter {
     
     private func raceCompleted() {
         let result = RaceResult(date: Date(), finishOrder: finishOrder)
-        RaceHistoryManager.shared.addResult(result)
+        RaceHistoryManager.shared.addResult(date: Date(), order: finishOrder)
         view?.setResetButtonHidden(false)
         view?.showFinishAlert(with: finishOrder)
     }
