@@ -42,20 +42,20 @@ class RaceViewController: UIViewController {
 extension RaceViewController: RaceViewProtocol {
     
     func setupUI() {
-            view.addSubview(startButton)
-            view.addSubview(resetButton)
+        view.addSubview(startButton)
+        view.addSubview(resetButton)
+        
+        startButton.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
+        resetButton.addTarget(self, action: #selector(resetButtonTapped), for: .touchUpInside)
+        
+        NSLayoutConstraint.activate([
+            startButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            startButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            startButton.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
-            resetButton.addTarget(self, action: #selector(resetButtonTapped), for: .touchUpInside)
-            
-            NSLayoutConstraint.activate([
-                startButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-                startButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                
-                resetButton.topAnchor.constraint(equalTo: startButton.bottomAnchor, constant: 20),
-                resetButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-            ])
-        }
+            resetButton.topAnchor.constraint(equalTo: startButton.bottomAnchor, constant: 20),
+            resetButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+    }
     
     func setupHorses() {
         for horse in horseViews {
@@ -103,7 +103,6 @@ extension RaceViewController: RaceViewProtocol {
     func resetHorses() {
         setupHorses()
     }
-        
     
     func animateHorse(at index: Int, duration: TimeInterval, finishLineX: CGFloat, completion: @escaping () -> Void) {
         guard index < horseViews.count else { return }

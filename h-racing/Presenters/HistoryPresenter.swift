@@ -14,6 +14,9 @@ class HistoryPresenter {
     init(view: HistoryViewProtocol) {
         self.view = view
     }
+}
+    
+extension HistoryPresenter {
     
     var results: [RaceResult] {
         return RaceHistoryManager.shared.results.reversed()
