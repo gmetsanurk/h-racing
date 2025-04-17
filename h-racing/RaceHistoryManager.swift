@@ -4,7 +4,7 @@
 //
 //  Created by Georgy on 2025-04-16.
 //
-
+import Foundation
 import RealmSwift
 
 class RaceHistoryManager {
@@ -14,9 +14,11 @@ class RaceHistoryManager {
     private init() {
         realm = try! Realm()
     }
-    var results: [RaceResult] = []
     
-    func addResult(_ result: RaceResult) {
-        results.append(result)
+    func addResult(date: Date, order: [Int]) {
+        let obj = RealmRaceResult(date: date, order: List(order))
+        try! realm.write {
+            realm.add(obj)
+        }
     }
 }
