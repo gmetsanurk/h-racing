@@ -4,6 +4,8 @@
 //
 //  Created by Georgy on 2025-04-16.
 //
+import Foundation
+
 protocol HistoryViewProtocol: AnyObject {
     func reloadData()
 }
@@ -11,26 +13,23 @@ protocol HistoryViewProtocol: AnyObject {
 class HistoryPresenter {
     weak var view: HistoryViewProtocol?
     
-    init(view: HistoryViewProtocol) {
-        self.view = view
-    }
+    private var realmResults: [RealmRaceResult] = []
+    
 }
     
 extension HistoryPresenter {
     
-    var results: [RaceResult] {
-        return RaceHistoryManager.shared.results.reversed()
-    }
-    
     func numberOfResults() -> Int {
-        return results.count
+        return realmResults.count
     }
     
-    func result(at index: Int) -> RaceResult {
-        return results[index]
+    func result(at index: Int) -> (date: Date, order: [Int]) {
+        let currentObject = realmResults[index]
+        return (currentObject.date, currentObject.finishOrder.map{ $0 })
     }
     
     func viewWillAppear() {
+        realmResults = RaceHistoryManager.shared.allResults()
         view?.reloadData()
     }
 }
