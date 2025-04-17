@@ -16,6 +16,7 @@
 		66EA93232DAFCB1A00E19920 /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA93222DAFCB1300E19920 /* HistoryPresenter.swift */; };
 		66EA93252DAFCB4700E19920 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA93242DAFCB3C00E19920 /* HistoryViewController.swift */; };
 		66EA93272DAFD15C00E19920 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA93262DAFD15600E19920 /* HomeTabBarController.swift */; };
+		66EA932C2DB111BC00E19920 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 66EA932B2DB111BC00E19920 /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66EA932C2DB111BC00E19920 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +119,7 @@
 			);
 			name = "h-racing";
 			packageProductDependencies = (
+				66EA932B2DB111BC00E19920 /* RealmSwift */,
 			);
 			productName = "h-racing";
 			productReference = 66EA92D62DAFBE0A00E19920 /* h-racing.app */;
@@ -146,6 +149,9 @@
 			);
 			mainGroup = 66EA92CD2DAFBE0A00E19920;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				66EA93282DB111BC00E19920 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 66EA92D72DAFBE0A00E19920 /* Products */;
 			projectDirPath = "";
@@ -383,6 +389,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		66EA93282DB111BC00E19920 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				kind = exactVersion;
+				version = 10.54.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		66EA932B2DB111BC00E19920 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66EA93282DB111BC00E19920 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 66EA92CE2DAFBE0A00E19920 /* Project object */;
 }

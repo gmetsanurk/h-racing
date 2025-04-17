@@ -5,9 +5,15 @@
 //  Created by Georgy on 2025-04-16.
 //
 
+import RealmSwift
+
 class RaceHistoryManager {
     static let shared = RaceHistoryManager()
-    private init() {}
+    private let realm: Realm
+    
+    private init() {
+        realm = try! Realm()
+    }
     var results: [RaceResult] = []
     
     func addResult(_ result: RaceResult) {
