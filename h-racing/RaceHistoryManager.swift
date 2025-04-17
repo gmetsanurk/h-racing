@@ -21,4 +21,10 @@ class RaceHistoryManager {
             realm.add(obj)
         }
     }
+    
+    func allResults() -> [RealmRaceResult] {
+        return realm.objects(RealmRaceResult.self)
+                    .sorted(byKeyPath: "date", ascending: false)
+                    .toArray()
+    }
 }
