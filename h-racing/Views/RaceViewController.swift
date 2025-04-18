@@ -46,8 +46,18 @@ extension RaceViewController: RaceViewProtocol {
         view.addSubview(startButton)
         view.addSubview(resetButton)
         
-        startButton.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
-        resetButton.addTarget(self, action: #selector(resetButtonTapped), for: .touchUpInside)
+        startButton.addAction(
+            UIAction(handler: { [weak self] _ in
+                self?.presenter.startRace()
+            }),
+            for: .primaryActionTriggered
+        )
+        resetButton.addAction(
+            UIAction(handler: { [weak self] _ in
+                self?.presenter.resetRace()
+            }),
+            for: .primaryActionTriggered
+        )
         
         NSLayoutConstraint.activate([
             startButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: AppGeometry.buttonTopOffset),
