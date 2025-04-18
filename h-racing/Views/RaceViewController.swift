@@ -17,14 +17,15 @@ class RaceViewController: UIViewController {
     let startButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Start", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: AppGeometry.buttonFontSize, weight: .bold)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
-    
     let resetButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Restart", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: AppGeometry.buttonFontSize, weight: .bold)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.isHidden = true
         return button
@@ -32,7 +33,7 @@ class RaceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = AppColors.backgroundColor
         presenter = RacePresenter(view: self)
         setupUI()
         setupHorses()
@@ -49,28 +50,27 @@ extension RaceViewController: RaceViewProtocol {
         resetButton.addTarget(self, action: #selector(resetButtonTapped), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
-            startButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            startButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: AppGeometry.buttonTopOffset),
             startButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            
-            resetButton.topAnchor.constraint(equalTo: startButton.bottomAnchor, constant: 20),
+            resetButton.topAnchor.constraint(equalTo: startButton.bottomAnchor, constant: AppGeometry.buttonSpacing),
             resetButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
     
     func setupHorses() {
-        for horse in horseViews {
-            horse.removeFromSuperview()
-        }
+        horseViews.forEach { $0.removeFromSuperview() }
         horseViews.removeAll()
         
-        let horseWidth: CGFloat = 50
-        let horseHeight: CGFloat = 30
-        let spacing: CGFloat = 20
-        
-        for i in 0..<horseCount {
+        for i in 0..<presenter.horseCount {
             let horseView = UIView()
             horseView.backgroundColor = randomColor()
-            horseView.frame = CGRect(x: 20, y: 150 + CGFloat(i) * (horseHeight + spacing), width: horseWidth, height: horseHeight)
+            horseView.layer.cornerRadius = AppGeometry.horseCornerRadius
+            horseView.frame = CGRect(
+                x: AppGeometry.horseLeading,
+                y: AppGeometry.horseTopOffset + CGFloat(i) * (AppGeometry.horseHeight + AppGeometry.horseSpacing),
+                width: AppGeometry.horseWidth,
+                height: AppGeometry.horseHeight
+            )
             view.addSubview(horseView)
             horseViews.append(horseView)
         }
