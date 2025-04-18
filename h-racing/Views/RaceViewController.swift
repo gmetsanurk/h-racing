@@ -16,7 +16,7 @@ class RaceViewController: UIViewController {
     
     let startButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Start", for: .normal)
+        button.setTitle(NSLocalizedString("race_vc.start", comment: "Start button"), for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: AppGeometry.buttonFontSize, weight: .bold)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -24,7 +24,7 @@ class RaceViewController: UIViewController {
     
     let resetButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Restart", for: .normal)
+        button.setTitle(NSLocalizedString("race_vc.restart", comment: "Restart button"), for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: AppGeometry.buttonFontSize, weight: .bold)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.isHidden = true
@@ -118,9 +118,14 @@ extension RaceViewController: RaceViewProtocol {
     }
     
     func showFinishAlert(with finishOrder: [Int]) {
-        let orderString = finishOrder.map { "Horse \($0)" }.joined(separator: ", ")
-        let alert = UIAlertController(title: "Finish!", message: "Finish order: \(orderString)", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        let horseMessage = NSLocalizedString("race_vc.horse_message", comment: "Horse message alert")
+        let finishMessageTitle = NSLocalizedString("race_vc.finish_title", comment: "Finish title alert")
+        let finishMessageBody = NSLocalizedString("race_vc.finish_body", comment: "Finish message alert")
+        let okMessage = NSLocalizedString("race_vc.ok", comment: "OK message alert")
+        
+        let orderString = finishOrder.map { "\(horseMessage) \($0)" }.joined(separator: ", ")
+        let alert = UIAlertController(title: finishMessageTitle, message: "\(finishMessageBody) \(orderString)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: okMessage, style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
     

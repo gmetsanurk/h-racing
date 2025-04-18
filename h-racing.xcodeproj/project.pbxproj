@@ -10,6 +10,7 @@
 		66CA120C2DB2500E00C5D4E5 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 66CA120B2DB2500E00C5D4E5 /* RealmSwift */; };
 		66CA120D2DB2500E00C5D4E5 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 66CA120B2DB2500E00C5D4E5 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		66CA12122DB2543700C5D4E5 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CA12112DB2543700C5D4E5 /* AppStyle.swift */; };
+		66CA12172DB2588A00C5D4E5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66CA12152DB2588A00C5D4E5 /* Localizable.strings */; };
 		66EA93132DAFC08B00E19920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA930E2DAFC08B00E19920 /* AppDelegate.swift */; };
 		66EA93152DAFC08B00E19920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66EA930F2DAFC08B00E19920 /* Assets.xcassets */; };
 		66EA931A2DAFC29B00E19920 /* RaceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA93192DAFC29A00E19920 /* RaceResult.swift */; };
@@ -39,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		66CA12112DB2543700C5D4E5 /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
+		66CA12162DB2588A00C5D4E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		66CA121C2DB2591600C5D4E5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		66EA92D62DAFBE0A00E19920 /* h-racing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "h-racing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EA930E2DAFC08B00E19920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66EA930F2DAFC08B00E19920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,18 +69,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		66CA120A2DB2500E00C5D4E5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		66EA92CD2DAFBE0A00E19920 = {
 			isa = PBXGroup;
 			children = (
 				66EA93122DAFC08B00E19920 /* h-racing */,
-				66CA120A2DB2500E00C5D4E5 /* Frameworks */,
 				66EA92D72DAFBE0A00E19920 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,6 +97,7 @@
 				66EA930F2DAFC08B00E19920 /* Assets.xcassets */,
 				66EA93102DAFC08B00E19920 /* Info.plist */,
 				66EA932F2DB11C7B00E19920 /* Extension */,
+				66CA12152DB2588A00C5D4E5 /* Localizable.strings */,
 			);
 			path = "h-racing";
 			sourceTree = "<group>";
@@ -187,6 +183,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 66EA92CD2DAFBE0A00E19920;
 			minimizedProjectReferenceProxies = 1;
@@ -209,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66EA93152DAFC08B00E19920 /* Assets.xcassets in Resources */,
+				66CA12172DB2588A00C5D4E5 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +232,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		66CA12152DB2588A00C5D4E5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66CA12162DB2588A00C5D4E5 /* en */,
+				66CA121C2DB2591600C5D4E5 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		66EA92EA2DAFBE0B00E19920 /* Debug */ = {

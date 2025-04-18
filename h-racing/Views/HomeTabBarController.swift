@@ -11,11 +11,11 @@ class HomeTabBarController: UITabBarController {
         super.viewDidLoad()
         view.overrideUserInterfaceStyle = AppColors.styleColor
         let raceVC = RaceViewController()
-        raceVC.title = "Races"
+        raceVC.title = NSLocalizedString("home_tabbar.races", comment: "Races tab title")
         raceVC.tabBarItem = UITabBarItem(title: "Races", image: nil, selectedImage: nil)
         
         let historyVC = HistoryViewController()
-        historyVC.title = "History"
+        historyVC.title = NSLocalizedString("home_tabbar.history", comment: "History tab title")
         historyVC.tabBarItem = UITabBarItem(title: "History", image: nil, selectedImage: nil)
         
         let raceNav = UINavigationController(rootViewController: raceVC)
