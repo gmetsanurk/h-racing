@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  h-racing
+
+  Created by Georgy on 2025-04-18.
+  
+*/
+
+"home_tabbar.races" = "Гонки";
+"home_tabbar.history" = "История";
+"race_vc.start" = "Старт";
+"race_vc.restart" = "Перезапустить";
+"race_vc.horse_message" = "Лошадь";
+"race_vc.finish_title" = "Финиш!";
+"race_vc.finish_body" = "Порядок финиша:";
+"race_vc.ok" = "OK";
+"history_view.title" = "История";
+"history_view.order_string" = "Лошадь";

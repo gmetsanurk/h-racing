@@ -15,7 +15,7 @@ class HistoryViewController: UIViewController, HistoryViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = AppColors.backgroundColor
-        title = "Race history"
+        title = NSLocalizedString("history_view.title", comment: "History view title")
         presenter = HistoryPresenter()
         setupTableView()
     }
@@ -56,7 +56,8 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
         formatter.timeStyle = .short
         let dateStr = formatter.string(from: date)
         
-        let orderString = order.map { "Horse \($0)" }.joined(separator: ", ")
+        let orderStringMessage = NSLocalizedString("history_view.order_string", comment: "Order string message")
+        let orderString = order.map { "\(orderStringMessage) \($0)" }.joined(separator: ", ")
         cell.textLabel?.text = "\(dateStr): \(orderString)"
         cell.textLabel?.numberOfLines = 0
         return cell
