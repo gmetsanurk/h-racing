@@ -17,6 +17,7 @@ class RaceViewController: UIViewController {
     let startButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Start", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -25,6 +26,7 @@ class RaceViewController: UIViewController {
     let resetButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Restart", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.isHidden = true
         return button
