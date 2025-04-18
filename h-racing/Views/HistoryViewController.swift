@@ -5,6 +5,11 @@
 //  Created by Georgy on 2025-04-16.
 //
 
+struct AppColors {
+    static let backgroundColor = UIColor.white
+    static let styleColor = UIUserInterfaceStyle.light
+}
+
 import UIKit
 
 class HistoryViewController: UIViewController, HistoryViewProtocol {
@@ -14,7 +19,7 @@ class HistoryViewController: UIViewController, HistoryViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = AppColors.backgroundColor
         title = "Race history"
         presenter = HistoryPresenter()
         setupTableView()
@@ -30,6 +35,8 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func setupTableView() {
         tableView.frame = view.bounds
+        tableView.overrideUserInterfaceStyle = AppColors.styleColor
+        tableView.backgroundColor = AppColors.backgroundColor
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.delegate = self

@@ -22,5 +22,15 @@ class HomeTabBarController: UITabBarController {
         let historyNav = UINavigationController(rootViewController: historyVC)
         
         viewControllers = [raceNav, historyNav]
+        let fontAttributes = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 16)]
+        UITabBarItem.appearance().setTitleTextAttributes(fontAttributes as [NSAttributedString.Key : Any], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes(fontAttributes as [NSAttributedString.Key : Any], for: .selected)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        var tabFrame = tabBar.frame
+        tabFrame.size.height = 80
     }
 }

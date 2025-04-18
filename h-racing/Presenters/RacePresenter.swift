@@ -35,7 +35,7 @@ extension RacePresenter {
         view?.setResetButtonHidden(true)
         view?.resetHorses()
         
-        let finishLineX = UIScreen.main.bounds.width - 70
+        let finishLineX = UIScreen.main.bounds.width - 100
         
         for index in 0..<horseCount {
             let duration = TimeInterval.random(in: 2.0...5.0)

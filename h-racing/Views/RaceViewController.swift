@@ -32,7 +32,7 @@ class RaceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = AppColors.backgroundColor
         presenter = RacePresenter(view: self)
         setupUI()
         setupHorses()
@@ -63,13 +63,14 @@ extension RaceViewController: RaceViewProtocol {
         }
         horseViews.removeAll()
         
-        let horseWidth: CGFloat = 50
-        let horseHeight: CGFloat = 30
+        let horseWidth: CGFloat = 80
+        let horseHeight: CGFloat = 50
         let spacing: CGFloat = 20
         
         for i in 0..<horseCount {
             let horseView = UIView()
             horseView.backgroundColor = randomColor()
+            horseView.layer.cornerRadius = 10
             horseView.frame = CGRect(x: 20, y: 150 + CGFloat(i) * (horseHeight + spacing), width: horseWidth, height: horseHeight)
             view.addSubview(horseView)
             horseViews.append(horseView)
