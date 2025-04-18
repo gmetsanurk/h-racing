@@ -9,7 +9,7 @@ import UIKit
 class HomeTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.overrideUserInterfaceStyle = AppColors.styleColor
         let raceVC = RaceViewController()
         raceVC.title = "Races"
         raceVC.tabBarItem = UITabBarItem(title: "Races", image: nil, selectedImage: nil)
@@ -22,7 +22,7 @@ class HomeTabBarController: UITabBarController {
         let historyNav = UINavigationController(rootViewController: historyVC)
         
         viewControllers = [raceNav, historyNav]
-        let fontAttributes = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 16)]
+        let fontAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: AppGeometry.buttonFontSize, weight: .bold)]
         UITabBarItem.appearance().setTitleTextAttributes(fontAttributes as [NSAttributedString.Key : Any], for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes(fontAttributes as [NSAttributedString.Key : Any], for: .selected)
     }
@@ -31,6 +31,6 @@ class HomeTabBarController: UITabBarController {
         super.viewDidLayoutSubviews()
         
         var tabFrame = tabBar.frame
-        tabFrame.size.height = 80
+        tabFrame.size.height = AppGeometry.tabBarHeight
     }
 }

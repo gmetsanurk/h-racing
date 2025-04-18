@@ -5,11 +5,6 @@
 //  Created by Georgy on 2025-04-16.
 //
 
-struct AppColors {
-    static let backgroundColor = UIColor.white
-    static let styleColor = UIUserInterfaceStyle.light
-}
-
 import UIKit
 
 class HistoryViewController: UIViewController, HistoryViewProtocol {

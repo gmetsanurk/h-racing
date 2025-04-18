@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		66CA120C2DB2500E00C5D4E5 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 66CA120B2DB2500E00C5D4E5 /* RealmSwift */; };
 		66CA120D2DB2500E00C5D4E5 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 66CA120B2DB2500E00C5D4E5 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		66CA12122DB2543700C5D4E5 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CA12112DB2543700C5D4E5 /* AppStyle.swift */; };
 		66EA93132DAFC08B00E19920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA930E2DAFC08B00E19920 /* AppDelegate.swift */; };
 		66EA93152DAFC08B00E19920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66EA930F2DAFC08B00E19920 /* Assets.xcassets */; };
 		66EA931A2DAFC29B00E19920 /* RaceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA93192DAFC29A00E19920 /* RaceResult.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		66CA12112DB2543700C5D4E5 /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
 		66EA92D62DAFBE0A00E19920 /* h-racing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "h-racing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EA930E2DAFC08B00E19920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66EA930F2DAFC08B00E19920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				66EA930E2DAFC08B00E19920 /* AppDelegate.swift */,
+				66CA12112DB2543700C5D4E5 /* AppStyle.swift */,
 				66EA931B2DAFC2DA00E19920 /* RaceHistoryManager.swift */,
 				66EA93172DAFC27D00E19920 /* Views */,
 				66EA93182DAFC28C00E19920 /* Models */,
@@ -224,6 +227,7 @@
 				66EA931E2DAFC31000E19920 /* RaceViewController.swift in Sources */,
 				66EA93312DB11C9700E19920 /* RealmCollection+Extension.swift in Sources */,
 				66EA93332DB1202D00E19920 /* List+Extension.swift in Sources */,
+				66CA12122DB2543700C5D4E5 /* AppStyle.swift in Sources */,
 				66EA931C2DAFC2E000E19920 /* RaceHistoryManager.swift in Sources */,
 				66EA93232DAFCB1A00E19920 /* HistoryPresenter.swift in Sources */,
 			);
